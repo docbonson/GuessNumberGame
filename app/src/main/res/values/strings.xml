@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GuessTheNumberGame</string>
+    <string name="guess_a_number_between_1_and_50">Guess a number between 1 and 50.</string>
+    <string name="numberHint">##</string>
+    <string name="guesses_remaining">Guesses Remaining: </string>
+    <string name="guess">Guess</string>
+    <string name="give_up">Give Up</string>
+    <string name="loser">:( Loser! The correct number was: </string>
+    <string name="winner">:) Winner! The correct number was: </string>
+    <string name="high">That\'s too high!</string>
+    <string name="low">That\'s too low!</string>
+    <string name="not_right">That isn\'t a number between 1 and 50 >:(</string>
+    <string name="games_won">Games Won:</string>
+    <string name="_0">0</string>
+    <string name="games_lost">Games Lost:</string>
+    <string name="total_games_played">Total Games Played:</string>
+</resources>

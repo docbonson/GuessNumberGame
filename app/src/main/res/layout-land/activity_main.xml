@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0e3e8c"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <!--    Win/loss Text-->
+    <TextView
+        android:id="@+id/win_lose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="?attr/colorAccent"
+        android:textSize="25sp"
+        android:paddingBottom="10dp"/>
+
+    <!--    Real number-->
+    <TextView
+        android:id="@+id/realNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="25sp" />
+
+    <!--    Win or lose notification-->
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="20sp" />
+
+    <!--    Directions-->
+    <TextView
+        android:id="@+id/tvGuess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/guess_a_number_between_1_and_50"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:layout_gravity="center"/>
+
+    <!--    User Number-->
+    <EditText
+        android:id="@+id/edtNumber"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/numberHint"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textColorHint="@android:color/background_light" />
+
+    <!--    Number of guesses layout-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--        Guess remaining text-->
+        <TextView
+            android:id="@+id/tv_guessRemainTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/guesses_remaining"
+            android:textColor="@android:color/background_light"
+            android:textSize="22sp" />
+
+        <!--   Guess amount remaining-->
+        <TextView
+            android:id="@+id/tv_numRemainingGuesses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text=""
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <!--    Button Layout-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="15dp">
+
+        <!--        Guess button-->
+        <Button
+            android:id="@+id/btnGuess"
+            android:layout_width="213dp"
+            android:layout_height="65dp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:text="@string/guess"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/tryAgain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="Try Again?"
+            android:textColor="@android:color/background_dark" />
+
+        <!--        Give up Button-->
+        <Button
+            android:id="@+id/btnGiveUp"
+            android:layout_width="197dp"
+            android:layout_height="65dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:text="@string/give_up"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--    Total games layout-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_totalGames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/total_games_played"
+            android:textColor="@android:color/background_light"
+            android:paddingEnd="5dp"/>
+
+        <TextView
+            android:id="@+id/num_totalGames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/_0"
+            android:textColor="@android:color/holo_orange_dark"
+            android:paddingEnd="5dp"/>
+
+        <!--        Games won text-->
+        <TextView
+            android:id="@+id/tv_gamesWon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/games_won"
+            android:textColor="@android:color/background_light"
+            android:paddingEnd="5dp"/>
+
+        <!--        Games won counter-->
+        <TextView
+            android:id="@+id/num_gamesWon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:textColor="@android:color/holo_orange_dark"
+            android:paddingEnd="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_gamesLost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/games_lost"
+            android:textColor="@android:color/background_light"
+            android:paddingEnd="5dp"/>
+
+        <!--        Games lost counter-->
+        <TextView
+            android:id="@+id/num_gamesLost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:textColor="@android:color/holo_orange_dark" />
+    </LinearLayout>
+
+</LinearLayout>
